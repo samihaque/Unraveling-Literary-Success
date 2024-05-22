@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/1187113/e33b2036a1714814b1120d9777c712ab
+bundleId: https://api.rpubs.com/api/v1/document/1187113/e33b2036a1714814b1120d9777c712ab
+url: http://rpubs.com/ubaydulsami/1187113
+version: 1

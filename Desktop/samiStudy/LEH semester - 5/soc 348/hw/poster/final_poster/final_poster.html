@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+
+
+
+<title>Unraveling Literary Success - A Comparative NLP Analysis of Popular and Unpopular Science Fiction Novels</title>
+
+
+
+
+
+
+<style>
+@page {
+size: 45in 38in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 45px;
+width: 45in;
+height: 38in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 45in;
+height: 38in;
+padding: 0cm;
+}
+.title_container {
+width: 45in;
+height: calc(38in * 0.15);
+overflow: hidden;
+background-color: #0b4545;
+border: 0 solid #0b4545;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #cc0000;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #cc0000;
+}
+
+/* mouse over link */
+a:hover {
+color: #cc0000;
+}
+
+/* selected link */
+a:active {
+color: #cc0000;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #0b4545;
+-moz-column-rule-color: #0b4545;
+column-rule-color: #0b4545;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(45in + 0 + 0);
+height: calc(38in * 0.83);
+padding-top: calc(38in * 0.005);
+padding-bottom: calc(38in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #0b4545;
+background-color: #0b4545;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00808024;
+color: #0b4545;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+<img src= 'cuny-logo.jpg' style="width: 80%">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Unraveling Literary Success - A Comparative NLP Analysis of Popular and Unpopular Science Fiction Novels</h1>
+<h3 id="author">Ubaydul H Sami<sup></sup></h3><br>
+<h5 id="affiliation"><sup></sup> Department of Computer Science, Lehman College, CUNY</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+<img src=lehman_logo.jpg style="width: 80%">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<style type="text/css">
+table {
+font-size: 12px;
+}
+p {
+font-size: 35px;
+}
+#selected-references.div {
+font-size: 18px;
+}
+#refs {
+font-size: 20px;
+}
+</style>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Explore the fascinating intersection of literature and technology with our poster presentation, where we use Natural Language Processing (NLP) to analyze the reasons behind the varying levels of success of two science fiction novels. We compare “The Time Machine” by H.G. Wells, which is widely acclaimed, with “The Planet Mappers” by E. Everett Evans, a lesser-known work.</p>
+<p><img src="poster_image/time_machine_cover.jpeg" width="20%" style="float:right; padding:10px" />
+H.G. Wells’s novel <code>The Time Machine</code> follows a Victorian scientist who invents a device to travel through time. In the year 802,701 AD, he discovers humanity has evolved into two races: the gentle Eloi and the predatory Morlocks. After his time machine is stolen and his Eloi friend Weena dies, he then travels further into the future, witnessing Earth’s gradual decline. Thirteen million years into the future, he finds a cold, desolate Earth. Upon his return, his story is met with skepticism. He departs on another journey and never returns, leaving behind only two mysterious flowers as evidence of his travels.</p>
+<p><img src="poster_image/planet_mappers_cover.jpeg" width="25%" style="float:right; padding:10px" />
+In <code>The Planet Mappers</code> by E. Everett Evans, Jon, and Jak, along with their parents, embark on a mission to map uncharted planets. During their perilous journey, their father sustains a serious injury, adding urgency and tension to their quest. Despite this setback, the family perseveres, facing challenges together as they navigate through alien landscapes and encounter unexpected dangers. The father’s injury serves as a pivotal moment in the story, highlighting the risks involved in their mission and the teamwork and resilience of the characters as they strive to overcome adversity.</p>
+<div id="objectives" class="section level2">
+<h2>Objectives</h2>
+<ol style="list-style-type: decimal">
+<li>Compare linguistic and thematic content of both books.</li>
+<li>Identify factors influencing reader reception of sci-fi literature.</li>
+<li>Inform future sci-fi writer by providing insights into factors influencing literary recognition.</li>
+</ol>
+</div>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<p>To begin, the full text for both book were retrieved from Project Gutenberg. We then focused on the core narrative by removing extraneous content like introductions and copyright information through text cleaning. Next, each sentence was broken down into individual words, a process known as tokenization. Finally, the stemming algorithm was applied to these tokens to reduce words to their root form.</p>
+<p>These initial preprocessing steps prepare the textual data for further NLP analysis, where we can explore linguistic features and thematic elements that might contribute to a novel’s reception by readers.</p>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<div id="word-distribution" class="section level2">
+<h2><b>Word Distribution</b></h2>
+<p><b>Top 10 word counts &amp; Top 25 Word Distribution Showed Below:</b>
+<img src="poster_image/both_book_top_10_word.png" width="30%" style="float:right; padding:10px" />
+<img src="poster_image/both_book_Word_counts_Distribution.png" width="65%" style="float:right; padding:10px" /></p>
+<p>The data shows that in <code>Planet Mappers,</code> the top words exhibit significantly more repetition than in <code>The Time Machine.</code> In The Time Machine, the top word ‘time’ appears 200 times, while most of the top 25 words appear fewer than 50 times. In contrast, The Planet Mappers features the words ‘jon’ and ‘jack’ 555 and 431 times, respectively, with nearly all top 25 words exceeding 50 occurrences. This excessive repetition in The Planet Mappers book could negatively impact its readability and contribute to its lesser success compared to The Time Machine book.</p>
+<p><b>Word Distribution for Each Chapter the books shown Below:</b>
+<img src="poster_image/time_machine_Word_Distribution.png" width="48%" style="float:right; padding:5px" />
+<img src="poster_image/Planet_Mappers_Word_Distribution.png" width="48%" style="float:right; padding:5px" />
+In <code>The Planet Mappers</code>, the top words are repeated across all chapters, indicating less variation and a focus on family-related terms. In contrast, <code>The Time Machine</code> features a wider variety of words, with scientific terms that vary by chapter. This greater lexical diversity in ‘The Time Machine’ book could enhance reader engagement and contribute to its success, while the repetition in ‘Planet Mappers’ might negatively affect its reception.</p>
+</div>
+<div id="sentiment-analysis" class="section level2">
+<h2><b>Sentiment Analysis</b></h2>
+<p>Sentiment analysis allows us to interpret the words in a text as positive or negative, using standard lexicons to characterize individual words. Given the themes of teamwork and discovery in <code>The Planet Mappers</code>, we expect it to have more positive sentiment compared to <code>The Time Machine</code>, which involves themes of war and the end of the universe.
+<img src="poster_image/time_machine_senti.png" width="48%" style="float:right; padding:10px" />
+<img src="poster_image/planet_mappers_senti.png" width="48%" style="float:right; padding:10px" />
+<img src="poster_image/both_books_pos-neg_ratio.png" width="19%" style="float:right; padding:10px" />
+<img src="poster_image/planet_mappers_positive_senti.png" width="38%" style="float:right; padding:10px" />
+<img src="poster_image/time_machine_positive_senti.png" width="38%" style="float:right; padding:10px" />
+</br> As expected, <code>The Time Machine</code> book is more negative than <code>The Planet Mappers</code>. The positive portions of ‘The Time Machine’ sentiment are mostly less than 50%, whereas ‘The Planet Mappers’ has a higher proportion of positive sentiment. In ‘The Time Machine’ book, all chapters have a stronger negative than positive sentiment, while ‘The Planet Mappers’ maintains a balance of both. This suggests that the negative tension or thrill in ‘The Time Machine’ may contribute to its greater popularity compared to ‘The Planet Mappers’.</p>
+</div>
+<div id="topic-models" class="section level2">
+<h2><b>Topic Models</b></h2>
+<p>Topic modeling is an unsupervised machine learning technique, aims to extract topics from large text datasets. Coherence and exclusivity are crucial concepts in this method. Using graphs of coherence and exclusivity, I determined the optimal number of topics for both “The Time Machine” and “The Planet Mappers.”</p>
+<p><b>Optimal Number of Topics &amp; Top 5 Words of Each Topics for Time Machine book:</b>
+<img src="poster_image/time_machine_topics_word.png" width="48%" style="float:right; padding:5px" />
+<img src="poster_image/time_machine_topic_graph.png" width="48%" style="float:right; padding:10px" />
+<b>Optimal Number of Topics &amp; Top 5 Words of Each Topics for Planet Mappers book:</b>
+<img src="poster_image/planet_mappers_topics_word.png" width="34%" style="float:right; padding:5px" />
+<img src="poster_image/planet_mappers_topic_graph.png" width="62%" style="float:right; padding:10px" />
+By examining <code>The Time Machine</code> and <code>The Planet Mappers</code>, we found six distinct themes in H.G. Wells’ classic. These included the mechanics of time travel, the contrasting lifestyles of the Eloi and Morlocks, the desolate future Earth, and the existance of nature without humanity. Interestingly, “The Planet Mappers,” despite boasting a wider vocabulary, revealed only three themes: spaceship elements, leadership and medical concerns (possibly hinting at a father-son dynamic and a leadership challenge due to injury), and the dangers of space exploration.</p>
+<p>This discrepancy suggests that “The Time Machine” offers a broader examination of scientific themes, potentially contributing to its popularity compared to “The Planet Mappers.”</p>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>Our comparative NLP analysis of <code>The Time Machine</code> and <code>The Planet Mappers</code> reveals that The Time Machine owes its popularity to greater lexical diversity, broader narrative complexity, and stronger emotional engagement. These factors enhance reader interest and contribute to its success. Despite having more words, <code>The Planet Mappers</code> covers fewer scientific concepts and lacks the narrative depth found in <code>The Time Machine</code>. This suggests that a rich variety of themes and emotional tension are critical to the success of science fiction novels, as demonstrated by our analysis.</p>
+</div>
+<div id="next-steps" class="section level1">
+<h1>Next Steps</h1>
+<p>I will conduct a sentence-level sentiment analysis to uncover the underlying emotions beyond just positive and negative sentiments. This deeper analysis will help us understand the nuanced emotional landscape of each book and its impact on reader engagement.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<p>Hammond, John R. HG Wells’s The time machine: a reference guide. Bloomsbury Publishing USA, 2004.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>

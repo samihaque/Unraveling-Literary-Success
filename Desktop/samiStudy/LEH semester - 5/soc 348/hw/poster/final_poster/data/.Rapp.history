@@ -1,0 +1,6 @@
+load("/Users/ubaydulsami/Desktop/samiStudy/LEH semester - 5/soc 348/hw/Working on preparing data/data/sci_fic_books_long.rda")
+sci_fic_books_long.rda
+View(sci_fic_books_long)
+load("/Users/ubaydulsami/Desktop/samiStudy/LEH semester - 5/soc 348/hw/Working on preparing data/data/table_of_contents.rda")
+load("/Users/ubaydulsami/Desktop/samiStudy/LEH semester - 5/soc 348/hw/data/sci_fic_books_trimmed.rda")
+load("/Users/ubaydulsami/Desktop/samiStudy/LEH semester - 5/soc 348/hw/poster/final_poster/data/table_of_contents.rda")
