@@ -1,1 +1,12 @@
+# Abstract:
 
+Explore the fascinating intersection of literature and technology with our poster presentation, where we use Natural Language Processing (NLP) to analyze the reasons behind the varying levels of success of two science fiction novels. To be specific, we compare "The Time Machine" by H.G. Wells, which is widely acclaimed, with "The Planet Mappers" by E. Everett Evans, a lesser-known work. We employ R programming and NLP techniques such as sentiment analysis, topic modeling, and linguistic analysis to precisely pinpoint the differences in language and themes between the two books and any other factors that may have contributed to their differing degrees of popularity. Our ultimate goal is to gain a better understanding of the complex relationship that determines how well science fiction literature is received by readers, based on linguistic elements, narrative structures, and reader perception. This study demonstrates the value of NLP methodologies in literary analysis and provides valuable information on the underlying mechanisms that influence literary recognition. As a result, authors can use this data to create more successful and well-received works in the future.
+
+## View the poster here: https://rpubs.com/ubaydulsami/1187113
+
+# Event:
+On May 24, 2024, I had the honor of representing Lehman College at the second annual CUNY Undergraduate Research Celebration Day at John Jay College, where I presented the results of my research through a poster presentation. Under the guidance of Professor Elin Waring, I embarked this semester-long research project that utilized R programming and Natural Language Processing (NLP) to analyze the factors behind the varying levels of success of two science fiction novels. You can view the poster on this published webpage: https://lnkd.in/eYVeb5un
+
+Presenting my work to hundreds of attendees from across the CUNY system was an exhilarating experience. It was particularly rewarding to see professors and graduate students show genuine interest in how NLP can be used to analyze literary success and to witness their amazement at our findings. 
+
+I am deeply grateful to the CUNY Office of Research for providing us with this incredible opportunity. My heartfelt thanks also go to Professor Elin Waring for her unwavering support, invaluable guidance, and continuous motivation, all of which were crucial to the success of this research project.
