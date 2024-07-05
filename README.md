@@ -5,7 +5,7 @@ Explore the fascinating intersection of literature and technology with our poste
 ## View the poster here: https://rpubs.com/ubaydulsami/1187113
 
 # Event:
-On May 24, 2024, I had the honor of representing Lehman College at the second annual CUNY Undergraduate Research Celebration Day at John Jay College, where I presented the results of my research through a poster presentation. Under the guidance of Professor Elin Waring, I embarked this semester-long research project that utilized R programming and Natural Language Processing (NLP) to analyze the factors behind the varying levels of success of two science fiction novels. You can view the poster on this published webpage: https://lnkd.in/eYVeb5un
+On May 24, 2024, I had the honor of representing Lehman College at the second annual CUNY Undergraduate Research Celebration Day at John Jay College, where I presented the results of my research through a poster presentation. Under the guidance of Professor Elin Waring, I embarked this semester-long research project that utilized R programming and Natural Language Processing (NLP) to analyze the factors behind the varying levels of success of two science fiction novels. You can view the poster on this published webpage: https://rpubs.com/ubaydulsami/1187113
 
 Presenting my work to hundreds of attendees from across the CUNY system was an exhilarating experience. It was particularly rewarding to see professors and graduate students show genuine interest in how NLP can be used to analyze literary success and to witness their amazement at our findings. 
 
